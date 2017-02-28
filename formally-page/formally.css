@@ -1,0 +1,182 @@
+label {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: sans-serif;
+}
+
+.formally-label-input {
+  display: inline-block;
+  color: #363636;
+  box-sizing: border-box;
+  padding: 8px;
+  text-transform: capitalize;
+}
+.formally-label-select {
+  display: inline-block;
+  color: #363636;
+  box-sizing: border-box;
+  padding: 8px;
+  text-transform: capitalize;
+}
+.formally-label-input.f-active {
+  font-weight: 700;
+  transition: border .2s ease-in-out;
+}
+
+.formally-label-input.text {
+  display: inline-block;
+  color: #363636;
+  box-sizing: border-box;
+  padding: 8px;
+  text-transform: capitalize;
+}
+.formally-label-textarea {
+  display: inline-block;
+  color: #363636;
+  box-sizing: border-box;
+  padding: 8px;
+  text-transform: capitalize;
+}
+
+.formally-input-text, .formally-input-date {
+  display: block;
+  padding: 12px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.formally-input-text.f-active, .formally-input-date.f-active {
+  border: 2px solid #363636;
+  outline: none;
+  transition: border .2s ease-in-out;
+}
+
+.formally-textarea {
+  display: block;
+  padding: 12px;
+  height: 4em;
+  max-width: 600px;
+  width: 100%;
+  border: 1px solid lightgray;
+}
+
+.formally-label-input.text.f-active {
+  font-weight: 700;
+  transition: border .2s ease-in-out;
+
+}
+.formally-label-textarea.f-active {
+  font-weight: 700;
+  transition: border .2s ease-in-out;
+}
+
+.formally-input-text.f-active {
+  border: 2px solid #363636;
+  outline: none;
+  transition: border .2s ease-in-out;
+}
+.formally-input-date.f-active {
+  border: 2px solid #363636;
+  outline: none;
+  transition: border .2s ease-in-out;
+}
+
+
+.formally-textarea.f-active {
+  border: 2px solid #363636;
+  outline: none;
+  transition: border .2s ease-in-out;
+}
+
+.formally-input-text.validate, .formally-input-text.f-active.validate {
+  border: 2px solid #3c763d;
+  transition: border .2s ease-in-out;
+}
+
+.formally-input-text.f-invalid {
+  border: 2px solid red;
+  transition: border .2s ease-in-out;
+}
+
+/*Below is the CSS for the Select Menu!!!*/
+
+select {
+  border: 1px solid lightgray;
+  background-color: #fff;
+  display: block;
+  text-transform: capitalize;
+  -webkit-appearance: textfield;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 0;
+  box-shadow: -1px 3px 2px #a9a9a9;
+  max-width: 600px;
+  min-width: 250px;
+  width: 100%;
+}
+
+select:focus {
+  outline: none;
+}
+
+.formally-label-input.radio {
+  display: inline-block;
+  margin-left: 0;
+}
+.formally-label-input.checkbox {
+  display: inline-block;
+  margin-left: 0;
+}
+formally-input-checkbox {
+  display: inline-block;
+}
+formally-input-radio {
+  display: inline-block;
+}
+.f-helperMessage {
+  margin: 0;
+  padding: 0;
+  font-size: .8em;
+}
+.formally-input-submit, .formally-input-button, .formally-input-reset {
+  -webkit-appearance: none;
+  -moz-appearance:    none;
+  appearance:         none;
+  overflow: hidden;
+  padding: 12px 12px;
+  background-color: #2b90d9;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 60ms ease-in-out;
+  text-align: center;
+  text-transform: capitalize;
+  border: 0 none;
+  margin-bottom: 10px;
+}
+
+.formally-input-reset {
+  background-color: gray;
+  color: black;
+}
+
+.formally-input-submit:hover, .formally-input-button:hover, formally-input-reset:hover {
+  transition: all 60ms ease;
+  opacity: .85;
+}
+
+@media only screen and (max-width: 700px) {
+  .formally-input-text, .formally-input-date {
+    width: 85vw;
+  }
+  .formally-textarea {
+    width: 85vw;
+  }
+  select {
+    width: 85vw;
+  }
+}

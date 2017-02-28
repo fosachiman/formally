@@ -1,0 +1,65 @@
+
+
+html, body {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #FFFEFE;
+
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+}
+h2 {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+}
+h3 {
+  font-family: 'Playfair Display', serif;
+}
+img {
+  height: 50px;
+  width: 50px;
+  display: block;
+  margin: 0 auto;
+}
+p {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+pre {
+  background-color: black;
+}
+code {
+  color: white;
+}
+.showcase {
+  border: 1px solid blue;
+  padding: 15px;
+}
+.blue {
+  color: yellow;
+}
+.green {
+  color: lightgreen;
+}
+.unicode {
+  font-family: unicode;
+}
+strong {
+  text-decoration: underline;
+}
+.radio {
+  display: block;
+}
+.inner-show {
+  display: flex;
+  justify-content: flex-start;
+}
+.second, .first {
+  margin-left: 20%;
+}
+select {
+  margin-top: 5px;
+}
