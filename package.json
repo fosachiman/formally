@@ -1,0 +1,21 @@
+{
+  "name": "formally",
+  "version": "0.0.2",
+  "description": "Accessible, responsive, classy form elements",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "form",
+    "form",
+    "elements",
+    "responsive",
+    "forms",
+    "accessible",
+    "accessibility",
+    "easy"
+  ],
+  "author": "Jason Humphreys <jasonphumphreys@gmail.com>",
+  "license": "ISC"
+}
