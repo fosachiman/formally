@@ -71,7 +71,6 @@ function setUpFormallyLabels(element) {
       return
     else if (!element.hasAttribute('aria-label'))
       insertLabel(element);
-
 }
 
 function assignClass(element) {

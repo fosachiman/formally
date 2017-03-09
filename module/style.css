@@ -42,14 +42,14 @@ label {
   text-transform: capitalize;
 }
 
-.formally-input-text, .formally-input-date {
+.formally-input-text, .formally-input-date, .formally-input-email, .formally-input-password {
   display: block;
   padding: 12px;
   max-width: 600px;
   width: 100%;
 }
 
-.formally-input-text.f-active, .formally-input-date.f-active {
+.formally-input-text.f-active, .formally-input-date.f-active, .formally-input-email.f-active, .formally-input-text.f-active {
   border: 2px solid #363636;
   outline: none;
   transition: border .2s ease-in-out;
@@ -84,7 +84,16 @@ label {
   outline: none;
   transition: border .2s ease-in-out;
 }
-
+.formally-input-email.f-active {
+  border: 2px solid #363636;
+  outline: none;
+  transition: border .2s ease-in-out;
+}
+.formally-input-password.f-active {
+  border: 2px solid #363636;
+  outline: none;
+  transition: border .2s ease-in-out;
+}
 
 .formally-textarea.f-active {
   border: 2px solid #363636;
@@ -92,12 +101,12 @@ label {
   transition: border .2s ease-in-out;
 }
 
-.formally-input-text.validate, .formally-input-text.f-active.validate {
+.formally-input-text.validate, .formally-input-text.f-active.validate, .formally-input-email.validate, .formally-input-email.f-active.validate, .formally-input-password.validate, .formally-input-password.f-active.validate {
   border: 2px solid #3c763d;
   transition: border .2s ease-in-out;
 }
 
-.formally-input-text.f-invalid {
+.formally-input-text.f-invalid, .formally-input-email.f-invalid, .formally-input-password.f-invalid {
   border: 2px solid red;
   transition: border .2s ease-in-out;
 }
