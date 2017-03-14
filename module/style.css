@@ -42,7 +42,7 @@ label {
   text-transform: capitalize;
 }
 
-.formally-input-text, .formally-input-date, .formally-input-email[type="email"], .formally-input-password[type="password"] {
+.formally-input-text, .formally-input-date, .formally-input-email, .formally-input-password {
   display: block;
   padding: 12px;
   max-width: 600px;
@@ -102,7 +102,7 @@ label {
 }
 
 .formally-input-text.validate, .formally-input-text.f-active.validate, .formally-input-email.validate[type="email"], .formally-input-email.f-active.validate[type="email"], .formally-input-password.validate[type="password"], .formally-input-password.f-active.validate[type="password"] {
-  border: 2px solid #3c763d;
+  border: 2px solid #32cd32;
   transition: border .2s ease-in-out;
 }
 
@@ -178,7 +178,7 @@ formally-input-radio {
   opacity: .85;
 }
 
-@media only screen and (max-width: 700px) {
+@media (max-width: 700px) {
   .formally-input-text, .formally-input-date, .formally-input-email, .formally-input-password {
     width: 85vw;
   }

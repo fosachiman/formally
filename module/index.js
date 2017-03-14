@@ -55,7 +55,6 @@ function createFooterMessage(element, className) {
   else if (className === 'f-email')
     msg = '*Please enter a valid email address';
   let parent = element.parentElement;
-  console.log(parent)
   let pTag = document.createElement('p');
   pTag.classList.add('f-helperMessage');
   pTag.innerHTML = msg;
@@ -179,6 +178,6 @@ function atLeastOneCharacter(char) {
 
 start();
 
-module.exports = {
-  start,
-}
+// module.exports = {
+//   start,
+// }
