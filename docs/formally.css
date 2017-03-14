@@ -198,18 +198,21 @@ input[type="radio"] {
   margin: 0;
   background-color: white;
   outline: none;
-  border-radius: 50%;
+  border-radius: 100%;
+  margin-bottom: 10px;
 }
 
 input[type="radio"]:hover {
   border: 1px solid #363636;
-  transition: all .2s ease-in-out;
+  transition: border .2s ease-in-out;
 }
 
 input[type="radio"]:checked {
+  background: url(circle-1.svg) no-repeat center;
+  background-size: 18px 18px;
   outline: none;
+  border: 1px solid #363636;
 }
-
 
 input[type="checkbox"] {
   -webkit-appearance: none;
@@ -218,16 +221,19 @@ input[type="checkbox"] {
   margin: 0;
   background-color: white;
   outline: none;
+  margin-bottom: 10px;
 }
 
 input[type="checkbox"]:hover {
   border: 1px solid #363636;
-  transition: all .2s ease-in-out;
+  transition: border .2s ease-in-out;
 }
 
 input[type="checkbox"]:checked {
-  background: url(x.png) no-repeat center #fff;
+  background: url(x.svg) no-repeat center;
+  background-size: 16px 16px;
   outline: none;
+  border: 1px solid #363636;
 }
 
 @media (max-width: 700px) {
