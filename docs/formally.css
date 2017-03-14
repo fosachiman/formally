@@ -47,10 +47,19 @@ label {
   padding: 12px;
   max-width: 600px;
   width: 100%;
+  border: 1px solid #ccc;
+}
+
+.formally-input-text:hover, .formally-input-date:hover, .formally-input-email:hover, .formally-input-password:hover {
+  border: 1px solid #363636;
+  transition: all .2s ease-in-out;
+  padding: 12px;
+  max-width: 600px;
+  width: 100%;
 }
 
 .formally-input-text.f-active, .formally-input-date.f-active, .formally-input-email.f-active[type="email"], .formally-input-password.f-active[type="password"] {
-  border: 2px solid #363636;
+  border: 1px solid #363636;
   outline: none;
   transition: border .2s ease-in-out;
 }
@@ -75,28 +84,28 @@ label {
 }
 
 .formally-input-text.f-active {
-  border: 2px solid #363636;
+  border: 1px solid #363636;
   outline: none;
   transition: border .2s ease-in-out;
 }
 .formally-input-date.f-active {
-  border: 2px solid #363636;
+  border: 1px solid #363636;
   outline: none;
   transition: border .2s ease-in-out;
 }
 .formally-input-email.f-active {
-  border: 2px solid #363636;
+  border: 1px solid #363636;
   outline: none;
   transition: border .2s ease-in-out;
 }
 .formally-input-password.f-active {
-  border: 2px solid #363636;
+  border: 1px solid #363636;
   outline: none;
   transition: border .2s ease-in-out;
 }
 
 .formally-textarea.f-active {
-  border: 2px solid #363636;
+  border: 1px solid #363636;
   outline: none;
   transition: border .2s ease-in-out;
 }
@@ -114,23 +123,31 @@ label {
 /*Below is the CSS for the Select Menu!!!*/
 
 select {
-  border: 1px solid lightgray;
-  background-color: #fff;
-  display: block;
+  background-color: transparent;
+  background: url(sel-down.png) no-repeat right #fff;
   text-transform: capitalize;
-  -webkit-appearance: textfield;
+  -webkit-appearance: none;
   padding: 12px;
+  font-size: 16px;
   cursor: pointer;
   border-radius: 0;
-  box-shadow: -1px 3px 2px #a9a9a9;
+  border: 1px solid #ccc;
   max-width: 600px;
   min-width: 250px;
-  width: 100%;
+  display: block;
 }
 
 select:focus {
   outline: none;
 }
+
+select:hover {
+  border: 1px solid #363636;
+  outline: none;
+  transition: border .2s ease-in-out;
+  box-sizing: border-box;
+}
+
 
 .formally-label-input.radio {
   display: inline-block;
@@ -183,9 +200,6 @@ formally-input-radio {
     width: 85vw;
   }
   .formally-textarea {
-    width: 85vw;
-  }
-  select {
     width: 85vw;
   }
 }
