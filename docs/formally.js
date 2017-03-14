@@ -1,4 +1,4 @@
-function instantiate() {
+function start() {
   let formallyElements = document.querySelectorAll('[formally]');
   formallyElements.forEach((el) => {
     if (!el.hasAttribute('id'))
@@ -55,7 +55,6 @@ function createFooterMessage(element, className) {
   else if (className === 'f-email')
     msg = '*Please enter a valid email address';
   let parent = element.parentElement;
-  console.log(parent)
   let pTag = document.createElement('p');
   pTag.classList.add('f-helperMessage');
   pTag.innerHTML = msg;
@@ -71,7 +70,6 @@ function setUpFormallyLabels(element) {
       return
     else if (!element.hasAttribute('aria-label'))
       insertLabel(element);
-
 }
 
 function assignClass(element) {
@@ -178,5 +176,8 @@ function atLeastOneCharacter(char) {
   return false;
 }
 
+start();
 
-instantiate();
+// module.exports = {
+//   start,
+// }
