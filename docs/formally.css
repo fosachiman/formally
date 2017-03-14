@@ -53,9 +53,6 @@ label {
 .formally-input-text:hover, .formally-input-date:hover, .formally-input-email:hover, .formally-input-password:hover {
   border: 1px solid #363636;
   transition: all .2s ease-in-out;
-  padding: 12px;
-  max-width: 600px;
-  width: 100%;
 }
 
 .formally-input-text.f-active, .formally-input-date.f-active, .formally-input-email.f-active[type="email"], .formally-input-password.f-active[type="password"] {
@@ -145,18 +142,18 @@ select:hover {
   border: 1px solid #363636;
   outline: none;
   transition: border .2s ease-in-out;
-  box-sizing: border-box;
 }
 
+.formally-label-input.radio, .formally-label-input.checkbox {
+  display: inline-block;
+  margin-left: 0;
+  color: #363636;
+  vertical-align: top;
+  line-height: 100%;
+  padding: 5px 10px 5px 10px;
+  font-size: 16px;
+}
 
-.formally-label-input.radio {
-  display: inline-block;
-  margin-left: 0;
-}
-.formally-label-input.checkbox {
-  display: inline-block;
-  margin-left: 0;
-}
 formally-input-checkbox {
   display: inline-block;
 }
@@ -193,6 +190,44 @@ formally-input-radio {
 .formally-input-submit:hover, .formally-input-button:hover, formally-input-reset:hover {
   transition: all 60ms ease;
   opacity: .85;
+}
+input[type="radio"] {
+  -webkit-appearance: none;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 0;
+  background-color: white;
+  outline: none;
+  border-radius: 50%;
+}
+
+input[type="radio"]:hover {
+  border: 1px solid #363636;
+  transition: all .2s ease-in-out;
+}
+
+input[type="radio"]:checked {
+  outline: none;
+}
+
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 0;
+  background-color: white;
+  outline: none;
+}
+
+input[type="checkbox"]:hover {
+  border: 1px solid #363636;
+  transition: all .2s ease-in-out;
+}
+
+input[type="checkbox"]:checked {
+  background: url(x.png) no-repeat center #fff;
+  outline: none;
 }
 
 @media (max-width: 700px) {
