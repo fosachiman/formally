@@ -61,3 +61,7 @@ strong {
 select {
   margin-top: 5px;
 }
+.button-header {
+  margin-top: 0;
+  margin-bottom: 20px;
+}

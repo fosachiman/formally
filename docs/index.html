@@ -12,31 +12,38 @@
   <h1>Formally</h1>
   <img src="tuxedo.png" alt="tuxedo logo">
   <h2>Responsive, Accessible, Classy Form Elements</h2>
-  <p>Formally is a front-end module that aims to allow for easy creation of classy form elements that are screen responsive and
+  <p>Formally is a front-end module that aims to allow for easy creation of form elements that are screen responsive and
   are accessible to those with vision impairments.
   </p>
   <p>
-    Take for example, the input box generated below meant to capture a user's email address.
+    Take for example, the input generated below meant to capture a user's first name.
   </p>
   <div class="showcase">
-    <input class="f-email" formally="Email:" id="email" type="email">
+    <input class="f-required" formally="First Name:" id="firstName" type="text">
   </div>
-  <p>And the simple line of code written to create this element:</p>
+  <p>And the simple line of code written to create the text box as well as the label associated with it:</p>
     <pre>
       <code class='language-html'>
-        &#60<span class="blue">input</span> class=<span class="green">"f-email"</span> formally=<span class="green">"Email:"</span> id=<span class="green">"email"</span> type=<span class="green">"email"</span>&#62
+        &#60<span class="blue">input</span> class=<span class="green">"f-required"</span> formally=<span class="green">"First Name:"</span> id=<span class="green">"firstName"</span> type=<span class="green">"text"</span>&#62
       </code>
     </pre>
-  <p>The class attribute has several options for form validation and is optional. You'll notice in the above input that values are
-  being judged against email address validity, with the input box turning green or red to signal success and failure of the value entered. There are two other optional class attributes that can be used for validity, and they are listed below:</p>
+  <p>Let's go through each of the attributes within the form element to describe what each of them is doing behind the scenes.</p>
+  <p>The class <span class="unicode">"f-required"</span> can be used when you would like to make a field required.  In this case, the requirement is that this field is filled in with any character (since a first name can really be anything).
+  While including this class is optional, it does two things for us. It adds the native <span class="unicode">"required"</span> attribute to the element, and the element will now have instant verification shown via the box being highlighted green
+  for a successful input and red for an unsuccessful one. Formally verification is friendly in that a red box outline will only be shown in the case of an unsuccessful entry after the user has left the focus of the input box.  If an entry was never made,
+  the input will still stand by for one before warning a user of an unsuccessful entry.</p>
+  <p>The <span class="unicode">"formally"</span> attribute does two things for us as well. It instantiates input boxes as Formally elements, so they will receive the default Formally styling. The value of the attribute creates and sets the name of the label,
+  a vital step in making sure our forms are accessible to the masses.</p>
+  <p>The <span class="unicode">"id"</span> attribute allows Formally to attribute the label correctly, another vital accessibility feature.</p>
+  <p>There are two additional classes that can be used to take advantage of Formally's instant form verification:</p>
     <pre>
       <code class='language-html'>
-        class=<span class="green">"f-required"</span>
+        class=<span class="green">"f-email"</span>
         class=<span class="green">"f-password"</span>
       </code>
     </pre>
-    <p><span class="unicode">f-required</span> is used to make a field required, and validates on any input received.  <span class="unicode">f-password</span>
-    validates only on a password containing at least one uppercase and lowercase letter, a number, and a special character ($@$!%*#?&).
+    <p><span class="unicode">f-email</span> is used to check for a valid email address based on RFC822. <span class="unicode">f-password</span>
+    validates only on a password containing at least one uppercase letter, a number, and a special character ($@$!%*#?&).
     </p>
     <div class="showcase">
       <input class="f-password" formally="password" id="password" type="password">
@@ -46,14 +53,7 @@
         &#60<span class="blue">input</span> class=<span class="green">"f-password"</span> formally=<span class="green">"password"</span> id=<span class="green">"password"</span> type=<span class="green">"password"</span>&#62
       </code>
     </pre>
-    <p>The <span class="unicode">formally</span> attribute is where you will want to define your label for the input you're creating.
-      This should be a description of your form element and will also be used to construct the label that will make these forms accessible to all.
-    </p>
-    <p>
-      The <span class="unicode">id</span> attribute is a <strong>required</strong> field on all form elements utilizing the Formally structure.  The id will serve to link input elements to their respective
-      labels and therefore tie all of the magic together.
-    </p>
-    <p>The final attribute <span class="unicode">type</span> is the HTML type attribute for all form elements.  Let's take a look at some other types...
+    <p>The final attribute <span class="unicode">type</span> is the HTML type attribute for all input elements.  Let's take a look at some other types...
     <div class="showcase">
       <div class="inner-show">
         <div class="first">
@@ -68,18 +68,26 @@
         </div>
       </div>
     </div>
+    <p>Radio Buttons:</p>
     <pre>
       <code class='language-html'>
-        &#60<span class="blue">input</span> formally=<span class="green">"Cool Ranch"</span> type=<span class="green">"radio"</span> name=<span class="green">"doritos"</span> value=<span class="green">"ranch"</span> checked&#62
+        &#60<span class="blue">input</span> id=<span class="green">"ranch"</span> formally=<span class="green">"Cool Ranch"</span> type=<span class="green">"radio"</span> name=<span class="green">"doritos"</span> value=<span class="green">"ranch"</span> checked&#62
+        &#60<span class="blue">input</span> id=<span class="green">"nacho"</span> formally=<span class="green">"Nacho Cheese"</span> type=<span class="green">"radio"</span> name=<span class="green">"doritos"</span> value=<span class="green">"nacho-cheese"</span>&#62
       </code>
     </pre>
-    <p>You'll notice that these follow a very similar formula.  I hope you'll also notice that the ID was omitted. As a fail-safe, Formally will create an ID for you in the
-      case that it was omitted, but please do not forget to include the ID!
+    <p>Checkboxes:</p>
+     <pre>
+      <code class='language-html'>
+        &#60<span class="blue">input</span> id=<span class="green">"tacos"</span> formally=<span class="green">"Tacos"</span> type=<span class="green">"checkbox"</span> name=<span class="green">"tacos"</span> value=<span class="green">"tacos"</span>&#62
+        &#60<span class="blue">input</span> id=<span class="green">"burritos"</span> formally=<span class="green">"Burritos"</span> type=<span class="green">"checkbox"</span> name=<span class="green">"burritos"</span> value=<span class="green">"burritos"</span>&#62
+      </code>
+    </pre>
+    <p>In the case of radio buttons and checkboxes, the label will automatically be appended after the input element.
     </p>
      <div class="showcase">
       <div class="inner-show">
         <div class="first">
-          <h3>Buttons!</h3>
+          <h3 class="button-header">Buttons!</h3>
             <input formally="button" type="button" value="Click Me!">
         </div>
         <div class="second">
@@ -93,7 +101,7 @@
       </div>
     </div>
     <p>An optional <span class="unicode">formally</span> attribute can be added to a select box to provide it with a label describing its contents.
-    It will default to formatting much like the form labels rather than the header used for the button.
+    It will default to formatting much like the form labels rather than the header used for the button.  Both select boxes and buttons (as well as text-areas) follow the same formula as above.
     </p>
     <h3>Installation</h3>
     <p>Click the button below to visit the GitHub repo where the most up to date JS and CSS files are ready to be implemented</p>

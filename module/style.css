@@ -7,7 +7,6 @@ label {
   vertical-align: baseline;
   font-family: sans-serif;
 }
-
 .formally-label-input {
   display: inline-block;
   color: #363636;
@@ -26,7 +25,6 @@ label {
   font-weight: 700;
   transition: border .2s ease-in-out;
 }
-
 .formally-label-input.text {
   display: inline-block;
   color: #363636;
@@ -41,7 +39,6 @@ label {
   padding: 8px;
   text-transform: capitalize;
 }
-
 .formally-input-text, .formally-input-date, .formally-input-email, .formally-input-password {
   display: block;
   padding: 12px;
@@ -191,6 +188,7 @@ formally-input-radio {
   transition: all 60ms ease;
   opacity: .85;
 }
+
 input[type="radio"] {
   -webkit-appearance: none;
   border: 1px solid #ccc;

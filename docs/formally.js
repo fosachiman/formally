@@ -44,16 +44,27 @@ function addEventListeners(formElement) {
     formElement.addEventListener('focusout', focusOut);
     formElement.addEventListener('click', highlightText);
   }
+  else if (formElement.getAttribute('type') === 'text' && formElement.tagName === 'INPUT') {
+    formElement.addEventListener('focusin', focus);
+    formElement.addEventListener('focusout', focusOut);
+    formElement.addEventListener('click', highlightText);
+  }
 }
 
 function createFooterMessage(element, className) {
   let msg;
-  if (className === 'f-required')
+  if (className === 'f-required') {
     msg = '*This field is required';
-  else if (className === 'f-password')
+    element.setAttribute('required', '');
+  }
+  else if (className === 'f-password') {
     msg = '*Password must include at least one capital letter, one number and one special character';
-  else if (className === 'f-email')
+    element.setAttribute('required', '');
+  }
+  else if (className === 'f-email') {
     msg = '*Please enter a valid email address';
+    element.setAttribute('required', '');
+  }
   let parent = element.parentElement;
   let pTag = document.createElement('p');
   pTag.classList.add('f-helperMessage');
